@@ -30,8 +30,7 @@ define("ace/theme/ambiance", [
   exports.isDark = true;
   exports.cssClass = "ace-ambiance";
   exports.cssText =
-    ".ace-ambiance .ace_gutter {\
-background-color: #3d3d3d;\
+    `.ace-ambiance .ace_gutter {background-color: #3d3d3d;\
 background-image: -moz-linear-gradient(left, #3D3D3D, #333);\
 background-image: -ms-linear-gradient(left, #3D3D3D, #333);\
 background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#3D3D3D), to(#333));\
@@ -199,7 +198,7 @@ background-image: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICA
 }\
 .ace-ambiance .ace_indent-guide {\
 background: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWNQUFD4z6Crq/sfAAuYAuYl+7lfAAAAAElFTkSuQmCC\") right repeat-y;\
-}";
+}`;
 
   var dom = require("../lib/dom");
   dom.importCssString(exports.cssText, exports.cssClass);
