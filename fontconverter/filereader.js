@@ -68,6 +68,12 @@ See http://github.com/bgrins/filereader.js for documentation.
                 setupClipboard(this, opts);
             });
         };
+
+        jQuery.fn.fileClipboard = function(opts) {
+            return this.each(function() {
+                setupClipboard(this, opts);
+            });
+        };
     }
 
     // Not all browsers support the FileReader interface. Return with the enabled bit = false.
