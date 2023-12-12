@@ -23299,8 +23299,7 @@
           }
 
           var smaskVertexShaderCode =
-            "\
-  attribute vec2 a_position;                                    \
+            `  attribute vec2 a_position;                                    \
   attribute vec2 a_texCoord;                                    \
                                                                 \
   uniform vec2 u_resolution;                                    \
@@ -23312,10 +23311,9 @@
     gl_Position = vec4(clipSpace * vec2(1, -1), 0, 1);          \
                                                                 \
     v_texCoord = a_texCoord;                                    \
-  }                                                             ";
+  }                                                             `;
           var smaskFragmentShaderCode =
-            "\
-  precision mediump float;                                      \
+            `  precision mediump float;                                      \
                                                                 \
   uniform vec4 u_backdrop;                                      \
   uniform int u_subtype;                                        \
@@ -23341,7 +23339,7 @@
     imageColor.a *= lum;                                        \
     imageColor.rgb *= imageColor.a;                             \
     gl_FragColor = imageColor;                                  \
-  }                                                             ";
+  }                                                             `;
           var smaskCache = null;
 
           function initSmaskGL() {
@@ -23480,8 +23478,7 @@
           }
 
           var figuresVertexShaderCode =
-            "\
-  attribute vec2 a_position;                                    \
+            `  attribute vec2 a_position;                                    \
   attribute vec3 a_color;                                       \
                                                                 \
   uniform vec2 u_resolution;                                    \
@@ -23496,16 +23493,15 @@
     gl_Position = vec4(clipSpace * vec2(1, -1), 0, 1);          \
                                                                 \
     v_color = vec4(a_color / 255.0, 1.0);                       \
-  }                                                             ";
+  }                                                             `;
           var figuresFragmentShaderCode =
-            "\
-  precision mediump float;                                      \
+            `  precision mediump float;                                      \
                                                                 \
   varying vec4 v_color;                                         \
                                                                 \
   void main() {                                                 \
     gl_FragColor = v_color;                                     \
-  }                                                             ";
+  }                                                             `;
           var figuresCache = null;
 
           function initFiguresGL() {
